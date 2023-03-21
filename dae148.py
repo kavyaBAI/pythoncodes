@@ -25,6 +25,7 @@ for i in range(max_row1):
 for i in range(max_row2):
     row2=df1.iloc[i]
     #print(row1[1])
+   #counting values row by row 
     if row2[1] not in res_dict1:
         res_dict1[row2[1]] = row2[0]
     else:
@@ -34,6 +35,8 @@ for i in res_dict1:
         diff=res_dict[i]-res_dict1[i]
         res[i]=diff
 for i in res_dict1:
+ 
+ #converting dataframe file to csv file 
     resdict[i]=[i,res_dict[i],res_dict1[i],res[i]]
     # headers=['date','till14', 'till8', 'diff']
 #print(resdict)
